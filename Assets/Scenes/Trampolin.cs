@@ -6,13 +6,15 @@ public class Trampolin : MonoBehaviour
 {
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.name=="Player")
+        if(collision.collider.name=="Player")
         {
+         
             collision.collider.GetComponent<PlayerMove>().SuperJump();
+          
         }
     }
 
-    
+     
 }
 
 

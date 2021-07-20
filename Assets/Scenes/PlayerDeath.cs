@@ -10,6 +10,7 @@ public class PlayerDeath : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
         {
+            print("Collided");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }

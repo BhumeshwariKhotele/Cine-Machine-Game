@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    int value = 100;
+    int value = 15;
     public void Score()
     {
         value--;

@@ -68,6 +68,15 @@ public class PlayerMove : MonoBehaviour
 
     public void SuperJump()
     {
-        rb.velocity = Vector2.up * PlayerJumpForce * 2;
+        rb.velocity = Vector2.up * PlayerJumpForce * 1.25f;
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.CompareTag("Coin"))
+        {
+            Destroy(collision.gameObject);
+        }
     }
 }
