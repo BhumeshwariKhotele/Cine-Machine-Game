@@ -10,17 +10,14 @@ public class Bridge : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        print("******************************");
-        StartCoroutine("DestroyBridge");
-        print("||||||||||||||||||||||||||||||");
+         StartCoroutine("DestroyBridge");
     }
     
     IEnumerator DestroyBridge()
     {
         yield return new WaitForSeconds(bridgeDestroyTime);
-        print("-------------------");
         Destroy(this.gameObject);
-        print("##########################");
+   
     }
 
 }

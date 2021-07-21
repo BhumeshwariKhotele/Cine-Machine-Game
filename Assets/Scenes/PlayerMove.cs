@@ -13,10 +13,12 @@ public class PlayerMove : MonoBehaviour
     public int jumps, maxNumberOfJumps;
     public Transform groundCheck;
     float xinput;
-    
+    ScoreManager score;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        score =GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
         FaceRight = true;
     }
     
@@ -77,6 +79,7 @@ public class PlayerMove : MonoBehaviour
         if(collision.gameObject.CompareTag("Coin"))
         {
             Destroy(collision.gameObject);
+            score.Score();
         }
     }
 }
